@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.60)
-AC_INIT(extio_genesis, new, [wd8rde@gmail.com>])
+AC_INIT(genesissdr, 1.0, [wd8rde@gmail.com>])
 AC_CONFIG_MACRO_DIRS([m4])
 #AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 #AM_INIT_AUTOMAKE([-Werror foreign])
@@ -50,5 +50,9 @@ AC_FUNC_STAT
 AC_CHECK_FUNCS([memset])
 PKG_CHECK_MODULES(HID, hidapi-libusb >= 0.8)
 
+PKG_PROG_PKG_CONFIG
+PKG_INSTALLDIR
+
 AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([genesissdr.pc])
 AC_OUTPUT
